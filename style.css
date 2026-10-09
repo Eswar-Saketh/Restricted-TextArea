@@ -1,0 +1,134 @@
+/* Google Font Import */
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap');
+
+/* CSS Variables for Color Palette & Design Tokens */
+:root {
+    --bg-color: #FFFCF6;
+    --card-bg: #EEDCC8;
+    --main-text: #2E0D14;
+    --accent-color: #8F1238;
+    --warning-color: #D62839;
+    --border-color: #D4BBA5;
+    --focus-ring: rgba(143, 18, 56, 0.2);
+    --shadow-color: rgba(46, 13, 20, 0.08);
+}
+
+/* Universal Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--main-text);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    line-height: 1.5;
+}
+
+.container {
+    width: 100%;
+    max-width: 480px;
+}
+
+/* Card Styling */
+.card {
+    background-color: var(--card-bg);
+    border-radius: 16px;
+    padding: 32px 28px;
+    box-shadow: 0 10px 25px var(--shadow-color);
+    border: 1px solid rgba(143, 18, 56, 0.1);
+}
+
+/* Typography */
+.title {
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: var(--accent-color);
+    margin-bottom: 6px;
+    text-align: center;
+}
+
+.description {
+    font-size: 0.95rem;
+    color: var(--main-text);
+    opacity: 0.85;
+    text-align: center;
+    margin-bottom: 24px;
+}
+
+/* Textarea Wrapper & Textarea Styling */
+.textarea-wrapper {
+    margin-bottom: 14px;
+}
+
+textarea {
+    width: 100%;
+    padding: 14px 16px;
+    font-family: inherit;
+    font-size: 1rem;
+    color: var(--main-text);
+    background-color: #FFFFFF;
+    border: 2px solid var(--border-color);
+    border-radius: 10px;
+    resize: vertical;
+    min-height: 120px;
+    outline: none;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+textarea::placeholder {
+    color: #A08878;
+}
+
+textarea:focus {
+    border-color: var(--accent-color);
+    box-shadow: 0 0 0 4px var(--focus-ring);
+}
+
+/* Red border state when limit is reached */
+textarea.limit-reached {
+    border-color: var(--warning-color);
+    box-shadow: 0 0 0 4px rgba(214, 40, 57, 0.2);
+}
+
+/* Counter Displays */
+.counter-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: var(--main-text);
+    margin-bottom: 12px;
+}
+
+#charCount {
+    font-weight: 600;
+    color: var(--accent-color);
+}
+
+#remainingCount {
+    opacity: 0.8;
+}
+
+/* Warning Message */
+.warning-message {
+    color: var(--warning-color);
+    font-size: 0.875rem;
+    font-weight: 600;
+    text-align: center;
+    margin-top: 8px;
+    transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+/* Helper Class to Hide Elements */
+.hidden {
+    display: none;
+}
