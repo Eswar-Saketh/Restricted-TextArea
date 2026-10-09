@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Character Counter</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="container">
+        <div class="card">
+            <h1 class="title">Character Counter</h1>
+            <p class="description">Type your message and track your character count.</p>
+            
+            <div class="textarea-wrapper">
+                <textarea 
+                    id="messageInput" 
+                    placeholder="Start typing your message..." 
+                    maxlength="100"
+                    rows="5"
+                ></textarea>
+            </div>
+
+            <div class="counter-container">
+                <span id="charCount">0 / 100 characters</span>
+                <span id="remainingCount">100 characters remaining</span>
+            </div>
+
+            <p id="warningMessage" class="warning-message hidden">Character limit reached!</p>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
